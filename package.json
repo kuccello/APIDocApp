@@ -10,7 +10,7 @@
     "start": "electron .",
     "react-build": "cd react-app && yarn build",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
+    "dist": "yarn react-build && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [
@@ -23,5 +23,16 @@
   "devDependencies": {
     "electron": "~1.6.2",
     "electron-builder": "^19.11.1"
+  },
+  "build": {
+    "appId": "deb.id",
+    "mac": {
+      "category": "deb.app.category.type"
+    },
+    "files":[
+      "react-app/build/**/*",
+      "main.js",
+      "package.json"
+    ]
   }
 }
