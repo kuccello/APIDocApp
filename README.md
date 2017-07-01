@@ -10,9 +10,14 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/emergentbit/deb.git
+git clone https://github.com/emergentbit/deb.git YOUR-PROJECT-NAME
 # Go into the repository
-cd deb
+cd YOUR-PROJECT-NAME
+# Setup new repo location for your project
+# Make a new repo on Github called YOUR-PROJECT-NAME
+git remote set-url origin git@github.com:yourname/YOUR-PROJECT-NAME.git
+# Push it
+git push
 # Install dependencies
 yarn install
 # Run the app
